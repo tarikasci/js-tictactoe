@@ -56,5 +56,12 @@ function checkScore(){
             return
         }
     })
+
+    const isTie = Array.from(allSquares).every(square => square.firstChild != null)
+    if (isTie) {
+        infoDisplay.textContent = "It's a tie!";
+        return;
+    }
+
     
 }
